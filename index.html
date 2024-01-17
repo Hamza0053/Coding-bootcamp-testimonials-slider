@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Be+Vietnam+Pro:wght@400;500;700&family=DM+Serif+Display&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@300;500;700&family=Karla:wght@400;700&family=Lexend+Deca&family=Raleway:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <img  class="pt__01"
+  src="images/pattern-bg.svg" alt="">
+  <img  class="pt__curve" 
+ src="images/pattern-curve.svg" alt="">
+   <img  class="pt__quotes"
+ src="images/pattern-quotes.svg" alt=""> 
+
+<main >
+
+  <!-- container 01
+  ======================
+ -->
+
+  <div class="container__01 anaya">
+
+
+
+        <div class="img-part">
+                    <img  class="container__img"
+                    src="images/image-tanya.jpg" alt="">
+            <div class="icon">
+                   <img src="images/icon-prev.svg" alt="" class="icon__next">
+                   <img src="images/icon-next.svg" alt="" class="icon__next">
+            </div>
+        </div>
+
+        <div class="home__para">
+          <p class="para">  “ I’ve been interested in coding for a while but never taken the jump, until now. 
+  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+  excited about the future. ”</p>
+          <h1 class="heading"> Tanya Sinclair<span class="lighter">  UX Engineer</span></h1>
+        </div>
+
+  </div>
+
+  
+  <!-- container 02
+  ====================
+ -->
+
+  <div class="container__01 john">
+
+        <div class="img-part">
+                    <img class="container__img"
+                    src="images/image-john.jpg" alt="">
+            <div class="icon">
+                   <img src="images/icon-prev.svg" alt="" class="icon__next">
+                   <img src="images/icon-next.svg" alt="" class="icon__next">
+            </div>
+        </div>
+
+        <div class="home__para">
+          <p class="para">
+  “ If you want to lay the best foundation possible I’d recommend taking this course. 
+  The depth the instructors go into is incredible. I now feel so confident about 
+  starting up as a professional developer. ”</p>
+          <h1 class="heading">  John Tarkpor<span class="lighter">  Junior Front-end Developer</span></h1>
+        </div>
+
+  </div>
+
+
+</main>
+
+<!-- javascript
+===================
+ -->
+ <script>
+     let  nextButton=document.querySelectorAll('.icon__next');
+     nextButton.forEach((btn)=>{
+     btn.addEventListener('click',()=>{
+     document.querySelector('.john').classList.toggle("john__back")
+     document.querySelector('.anaya').classList.toggle("anaya__remove")
+    })
+})
+</script>
+</body>
+</html>
